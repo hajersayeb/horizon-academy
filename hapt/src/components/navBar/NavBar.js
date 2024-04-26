@@ -1,34 +1,31 @@
-import { Outlet, Link } from "react-router-dom";
+import {  Link, Outlet } from "react-router-dom"
+import 'bootstrap/dist/css/bootstrap.css';
 const NavBar = () => {
     return (
         <>
-        <nav>
-            <ul>
-                <li>
-    <Link to="/">Acceuil</Link>
-    </li>
-    <li>
-    <Link to="/admin">Admin</Link>
-    </li>
-    <li>
-    <Link to="/contact">Contact</Link>
-    </li>
-    <li>
-    <Link to="/formation">Formation</Link>
-    </li>
-    <li>
-    <Link to="/inscription">Inscription</Link>
-    </li>
-    <li>
-    <Link to="/student">Student</Link>
-    </li>
-    <li>
-    <Link to="/login">Login</Link>
-    </li>
-    </ul>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <Link class="navbar-brand" to="/">Acceuil</Link>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+          <Link class="nav-link" to="/admin">Admin</Link>
+        </li>
+        <li class="nav-item">
+          <Link class="nav-link" to="/Contact">Contact</Link>
+        </li>
+
+        <li class="nav-item">
+          <Link class="nav-link" to="/formation">Formation</Link>
+        </li>
+      </ul>
+    </div>
+  </div>
 </nav>
         <Outlet />
-       
         </>
     )
 };
