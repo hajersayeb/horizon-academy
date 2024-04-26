@@ -1,0 +1,9 @@
+.rounded-circle{
+    width: 50px;
+    height: 50px;
+}
+.btn-position{
+    right: 0px;
+    position: absolute;
+   
+}
